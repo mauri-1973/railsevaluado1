@@ -1,0 +1,103 @@
+    <h1>Resumen</h1>
+    <br>
+    <div class="row">
+        
+        <div class="card mb-3">
+            <%= link_to "Add Movies", "/movies/index", class:"btn btn-sm btn-success mt-3 mb-3" %>
+            <div class="card-body table-responsive">
+                <table class="table table-striped">
+                    <caption>Movies</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-1">#</th>
+                            <th scope="col" class="col-3">Nombre</th>
+                            <th scope="col" class="col-4">Resumen</th>
+                            <th scope="col" class="col-2">Director</th>
+                            <th scope="col" class="col-2">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% @count = 1 %>
+                    <% @movies.each do |p| %>
+                        <tr>
+                            <th scope="row"><%= @count %></th>
+                            <td><%= p.name %></td>
+                            <td><%= p.synopsis %></td>
+                            <td><%= p.director %></td>
+                            <td><%= p.created_at.strftime("%d-%m-%Y  %H:%M") %></td>
+                        </tr>
+                        <% @count += 1 %>
+                    <% end%>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card mb-3">
+            <%= link_to "Add Series", "/series/index", class:"btn btn-sm btn-success mt-3 mb-3" %>
+            <div class="card-body table-responsive">
+                <table class="table table-striped">
+                    <caption>Series</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-1">#</th>
+                            <th scope="col" class="col-3">Nombre</th>
+                            <th scope="col" class="col-4">Resumen</th>
+                            <th scope="col" class="col-2">Director</th>
+                            <th scope="col" class="col-2">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% @count = 1 %>
+                    <% @series.each do |p| %>
+                        <tr>
+                            <th scope="row"><%= @count %></th>
+                            <td><%= p.name %></td>
+                            <td><%= p.synopsis %></td>
+                            <td><%= p.director %></td>
+                            <td><%= p.created_at.strftime("%d-%m-%Y  %H:%M") %></td>
+                        </tr>
+                        <% @count += 1 %>
+                    <% end%>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card mb-3">
+            <%= link_to "Add DocumentaryFilms", "/documentary/index", class:"btn btn-sm btn-success mt-3 mb-3" %>
+            <div class="card-body table-responsive">
+                <table class="table table-striped">
+                    <caption> DocumentaryFilms</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-1">#</th>
+                            <th scope="col" class="col-3">Nombre</th>
+                            <th scope="col" class="col-4">Resumen</th>
+                            <th scope="col" class="col-2">Director</th>
+                            <th scope="col" class="col-2">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% @count = 1 %>
+                    <% @documentaries.each do |p| %>
+                        <tr>
+                            <th scope="row"><%= @count %></th>
+                            <td><%= p.name %></td>
+                            <td><%= p.synopsis %></td>
+                            <td><%= p.director %></td>
+                            <td><%= p.created_at.strftime("%d-%m-%Y  %H:%M") %></td>
+                        </tr>
+                        <% @count += 1 %>
+                    <% end%>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    

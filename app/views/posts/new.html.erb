@@ -1,0 +1,20 @@
+<div class="row">
+<%= form_with model: @post, method: :post do  |form| %>
+    <fieldset>
+        <legend>Nuevo Post</legend>
+        <div class="col-4 mb-3">
+            <%= form.label :title, "Titulo", class: "form-label" %>
+            <%= form.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="col-4 mb-3">
+            <%= form.label :content, "Contenido", class: "form-label" %>
+            <%= form.text_field :content, class: "form-control" %>
+        </div>
+        
+        <div class="col-4 mb-3">
+            <%=  form.submit "Agregar", class: "btn btn-primary btn-md" %>
+        </div>
+    </fieldset>
+<% end %>
+</div>
